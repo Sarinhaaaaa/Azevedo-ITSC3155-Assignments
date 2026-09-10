@@ -7,7 +7,7 @@ class SandwichMaker:
         """Returns True when order can be made, False if ingredients are insufficient."""
         for item, amount in ingredients.items():
             if self.machine_resources[item] < amount:
-                print(f"Sorry, there is not enough ${item}.")
+                print(f"Sorry, there is not enough {item}.")
                 return False
         return True
 
