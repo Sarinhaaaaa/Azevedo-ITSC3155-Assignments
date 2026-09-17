@@ -34,18 +34,8 @@ class BankAccount:
         print(f"Current Balance: {self.current_balance}")
         print(f"Minimum Balance: {self.minimum_balance}")
 
-print("Account 1 Test:")
-account1 = BankAccount("Sarah", 500.0,100.0)
-account1.print_customer_information()
-account1.deposit(200.0)
-account1.withdraw(150.0)
-account1.withdraw(500.0)
 
-print("Account 2 Test:")
-account2 = BankAccount("Chloe", 1500.0,250.0)
-account2.print_customer_information()
-account2.withdraw(1200.0)
-account2.withdraw(100)
+
 
 
 
