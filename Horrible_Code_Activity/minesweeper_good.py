@@ -35,6 +35,7 @@ def play_game():
     spots = create_board()
     bombs = place_bombs()
     score = 0
+    safe_picks = 0  # Tracks how many safe spots the user has found
 
     input("Welcome! Type 'Start' to begin: ")
     print("\n" + draw_board(spots) + "\n")
@@ -71,6 +72,13 @@ def play_game():
             # KISS Demonstration: The points awarded equal the spot number itself. No separate variables needed.
             score += choice
             print(f"Current score: {score}")
+
+            # Win Condition: 20 total spots - 3 bombs = 17 safe spots to win
+            safe_picks += 1
+            if safe_picks == 17:
+                print("\n🎉 YOU WIN! You found all 17 safe spots! 🎉")
+                print(f"Perfect Final Score: {score}")
+                break
 
 
 # Start the game
